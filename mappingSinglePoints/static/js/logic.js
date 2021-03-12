@@ -8,5 +8,19 @@ attribution: 'Map data © <a href="https://www.openstreetmap.org/">OpenStreetMap
     maxZoom: 18,
     accessToken: API_KEY
 });
+
+// Add a marker to the map for LA
+let marker = L.marker([34.0522, -118.2437]).addTo(map)
+
+//Add a cirlce
+L.circle([34.0522, -118.2437], {
+    radius: 200000
+}).addTo(map);
+
+L.circleMarker([34.0522, -118.2437], {
+    radius:300,
+    color: "black",
+    fillColor: '#ffffa1'
+}).addTo(map)
 // Then we add our 'graymap' tile layer to the map.
 streets.addTo(map);
